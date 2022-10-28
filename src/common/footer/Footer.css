@@ -1,0 +1,42 @@
+footer{
+    background-color: rgb(2, 2, 124);
+    padding: 100px 0;
+    color: whitesmoke;
+}
+
+footer h1{
+    margin-bottom: 30px;
+    color: orangered;
+    font-weight: 500;
+    font-style: italic;
+}
+
+footer .img{
+    background-color: rgb(2, 2, 124);
+    padding: 15px 20px;
+    border-radius: 5px;
+}
+
+footer .img i{
+    font-size: 20px;
+    margin: 5px;
+}
+
+footer .img span{
+    margin-top: 5px;
+}
+footer p{
+    font-size: 14px;
+    font-weight: 500;
+    opacity: 0.5;
+    margin-bottom: 20px;
+}
+
+footer h2{
+    margin-bottom: 20px;
+}
+
+footer li{
+    margin-bottom: 10px;
+    opacity: 0.5;
+}
