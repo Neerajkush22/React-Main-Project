@@ -19,7 +19,7 @@
     
   }
   
-  .login-container input, button{
+  .login-container input, .button1{
     padding:0.6rem;
     margin: 1rem;
     font-size: 1rem;
@@ -39,13 +39,13 @@
     text-align: center;
   }
   
-  .login-container button{
+  .login-container .button1{
     background-color: black;
     color: white;
     font-weight: 700;
     border-radius: 7px;
   }
-  .login-container button:hover{
+  .login-container .button1:hover{
     background-color: rgba(0, 0, 0, 0.863);
   }
   

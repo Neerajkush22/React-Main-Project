@@ -1,6 +1,6 @@
 
 import { useState } from "react";
-import { useHistory } from "react-router-dom";
+import { Link, useHistory } from "react-router-dom";
 import './login.css'
 
 const Login = (props) => {
@@ -8,14 +8,38 @@ const Login = (props) => {
   const [password, setPassword] = useState("");
   const history = useHistory();
   const homepageHandler = () => {
+    // if (email.length === 0 || password.length === 0) {
+    //   alert("Inputs must not be empty!!");
+    //   return;
+    // } else if (email.includes("@")) {
+    //     props.setLogIn(true);
+    //     history.push("/")
+    // } else {
+    //   alert("Email or password not valid");
+    const users = []
+
+    const keys = Object.keys(window.localStorage)
+    for (let key of keys){
+      if(key!=="User"){
+        users.push(JSON.parse(window.localStorage.getItem(key)))
+      }
+     
+    }
+
     if (email.length === 0 || password.length === 0) {
       alert("Inputs must not be empty!!");
       return;
-    } else if (email.includes("@")) {
-        props.setLogIn(true);
-        history.push("/")
     } else {
-      alert("Email or password not valid");
+      for (let i in users){
+        if (users[i].email === email  && users[i].password===password){
+          alert("Logged in Successfull")
+          props.setLogIn(true)
+          history.push("/")
+          return
+        }  
+      }
+      alert("email or password is not Valid")
+      return
     }
   };
 
@@ -38,6 +62,7 @@ const Login = (props) => {
           onChange={(e) => setPassword(e.target.value)}
         />
         <button className="button1" onClick={homepageHandler}>Log in</button>
+        <button className="button1"><Link to="/register" style={{color: "white"}}>Register</Link></button>
         <span className="spn">Forgot password?</span>
       </div>
     </div>

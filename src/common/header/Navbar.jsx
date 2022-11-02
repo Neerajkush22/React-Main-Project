@@ -28,7 +28,7 @@ const Navbar = (props) => {
                         </li>
                         {!props.logIn && 
                         (<li>
-                            <Link to='/login'>Login</Link>
+                            <Link to='/login'>Login/SignUp</Link>
                         </li>)
                         }
                         {props.logIn && 
