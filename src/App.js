@@ -56,7 +56,7 @@ function App() {
 
   return (
     <>
-      <div className='appi'>
+      <div >
         {!loaded ? (
           <Loader />
         ) : (
